@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1stBootstapLandingPage</title>
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Note that the below Bootstrap file is a specific version. If you grab the most
+    current from Bootstrap website, you will see the button grow transition being a lot faster
+    than in my video.  Use whichever style sheet you like best! -->
+    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+<!-- CSS only -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
+     <!-- My own stylesheet -->
+    
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- In <div> am folosit initial clasele bootstrap container d-flex align-items-center si h-100 care insemana: 1. include elementele din div in container; 2. elementele in container vor fi aranjate in centrul vertical cf d-flex si align-items; 3. inaltimea containerulu va fi de 100% ceea ce ar coincide cu incaltimea body-ului. Insa, daca folosim un tezt scurt in <h1> elemtele vor fi afisate in centrul vertical si stanga liniei (inclusiv butonul si hr-ul). Astfel, pentru a aranja elementele in 
+    centrul liniei, am mai introdus o clasa bootstrap: justify-content-center!!!! -->
+    <div class="container d-flex align-items-center justify-content-center h-100 ">
+      <div class="row">
+        <header class="text-center col-12">
+          <h1 class="text-uppercase"><strong>The biggest startup event of the year !</strong> </h1>
+          <!--pentru a afisa textul cu litere mari, s-a folosit clasa class="text-uppercase" in cadrul elementului h1. Aceasta clasa apartine BOOTSTRAP-ului. Alte modalitti primcare am putea face acest lucru: (i) sa scriem cu litere mari din start; (ii) sa scriem in CSS text-transform: uppercase -->
+        </header>
+        <section class="text-center col-12">
+          <div class="buffer col-12"></div>
+          <hr>
+          <a href="https://mailchi.mp/400ef0039142/startup"><button class="btn btn-primary btnclss">Find out more</button></a>
+          <!-- Pentru a crea butonul, s-a folosit clasa btn btn-primary din Bootstrap: https://getbootstrap.com/docs/5.3/components/buttons/ iar btnclss este doar o clasa pe care o vom selecta in CSS. IMPORTANT: elementul button are 3 clase: (i) btn (ii) btn-primary si (iii) btnclss-->
+        </section>
+      </div>
+    </div>
+    <footer class="text-center col-12">LandingPage made by C.S..</footer>
+
+
+
+  </body>
+</html>
+<!-- fisierul initial, in care s-au creat elementele arata asa:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1stBootstapLandingPage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="text-uppercase"><strong> The biggest startup event of the year </strong> </h1>
+    <button class="btn btn-primary btnclss">Find out more</button>
+   </body>
+</html> 
+
+iar pentru a putea stiliza fiecare element vom folosi clase cu <div>, sectiuni si header.
+  vom avea nevoie de urmatoarele:
+  1. sa creem un container
+  2. in cadrul containerului sa pozitionam textul, butonul si linia in centrul acestuia
+  3. sa ne asiguram ca centrul containerului coincide cu centrul paginii
+  Nota: se vor folosii functii din bootstrap. 
+  Astfel s-au creat urmatoarele linii:
+  - clasa principala div: <div class="container d-flex align-items-center h-100"> Care contine: 1 containerul, functia flex din bootstrap, alinierea elementelor in centrul vertical si inaltimea de 100% ca sai a body-ului
+  - clasa secundara in care am creat liniile cu text, buton si linia stilizata
+  - clasa secundata <header> in care am spus ca randul h1 va avea textul in centrul liniei si IMPORTANT am scris ca linia are cele 12
+    parti ale sectiunilor create prin bootstrap
+  - sectiunea care cuprinde linia orizonala si butonul pe care am definit-o ca fiind coloana cu textul centrat in cele 12 parti ale liniei bootstap. In cadrul acesteia am introdus un buffer <div> pe care l-am stilizat ca avand inaltimea de 10rem in CSS, a.i. sa 
+  ofere spatiu intre h1 si hr + buton.
+    - 
+ -->
